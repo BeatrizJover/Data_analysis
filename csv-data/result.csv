@@ -1,0 +1,9 @@
+,average_price,median_price,price_m2
+most_expensive_belgium,"('S-gravenwezel-schilde', 1675000.0)","('S-gravenwezel-schilde', 1675000.0)","('Province of Namur', 21112.39)"
+least_expensive_belgium,"('Bouillon-ucimont', 59900.0)","('Bouillon-ucimont', 59900.0)","('Province of Hainaut', 1110.07)"
+most_expensive_flanders,"('S-gravenwezel-schilde', 1675000.0)","('S-gravenwezel-schilde', 1675000.0)","('Province of West Flanders', 16048.67)"
+least_expensive_flanders,"('Schuiferskapelle', 135000.0)","('Schuiferskapelle', 135000.0)","('Province of Flemish Brabant', 3720.47)"
+most_expensive_walloons,"('Ghoy', 1480000.0)","('Lasne-ohain', 1490000.0)","('Province of Namur', 21112.39)"
+least_expensive_walloons,"('Bouillon-ucimont', 59900.0)","('Bouillon-ucimont', 59900.0)","('Province of Hainaut', 1110.07)"
+most_expensive_brussels,"('Ixelles-chatelain', 1350000.0)","('Ixelles-chatelain', 1350000.0)","('Brussels-Capital Region', 5422.54)"
+least_expensive_brussels,"('Molenbeek', 192000.0)","('Molenbeek', 192000.0)","('Brussels-Capital Region', 5422.54)"
