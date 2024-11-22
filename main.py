@@ -73,7 +73,7 @@ def median_price_municipality(data, most=False, least=False):
 
 
 
-def price_m2_municipality(data, terrace:bool=True,garden:bool= True,land_surface:bool=True, most=False, least=False):
+def price_m2_municipality(data, terrace:bool=False,garden:bool=False,land_surface:bool=False, most=False, least=False):
     municipality_price_m2 = {}
     for group in data:
         meter_squared = 0
@@ -99,10 +99,6 @@ def price_m2_municipality(data, terrace:bool=True,garden:bool= True,land_surface
         return least_expensive, municipality_price_m2[least_expensive]
     else:
         return municipality_price_m2
-
-
-
-
 
 
 municipality_voi = {"most_expensive_belgium": {},
@@ -152,4 +148,31 @@ municipality_voi_df = pd.DataFrame(municipality_voi)
 print(municipality_voi_df)
 
 municipality_voi_df.to_csv('csv-data/result.csv')
+
+molenbeek = brussels_df.groupby('Locality').get_group('Molenbeek')
+Ixelles = brussels_df.groupby('Locality').get_group('Ixelles-chatelain')
+schuiferskapelle = flanders_df.groupby('Locality').get_group('Schuiferskapelle')
+gravenwezel = flanders_df.groupby('Locality').get_group('S-gravenwezel-schilde')
+lasne = walloon_df.groupby('Locality').get_group('Lasne-ohain')
+bouillon = walloon_df.groupby('Locality').get_group('Bouillon-ucimont')
+
+def subtype(df, name):
+    counts = df['Subtype of Property'].value_counts(normalize=True) * 100
+    counts_subtype = round(counts,1)
+
+    results = counts_subtype.reset_index()
+    results.columns = ['subtype of properties', 'percentage']
+
+    print(results)
+
+    results.to_csv(F'csv-data/municipalities/{name}.csv', index=False)
+
+    return results
+
+molenbeek_subtype = subtype(molenbeek, 'Molenbeek')
+ixelles_subtype = subtype(Ixelles, 'Ixelles-chatelain')
+schuiferskapelle_subtype = subtype(schuiferskapelle, 'Schuiferskapelle')
+gravenwezel_subtype = subtype(gravenwezel, 'S-gravenwezel-schilde')
+lasne_subtype = subtype(lasne, 'Lasne-ohain')
+bouillon_subtype = subtype(bouillon, 'Bouillon-ucimont')
 
