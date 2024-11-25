@@ -37,7 +37,7 @@ jupyternotebook: 7.2.2
 
 ## Usage
 - In data_analysis folder you will find notebooks with the graphs and analysis of the real estate market.
-
+- On the olha-branch you can find two files 'first_data_modifications.ipynb' and 'charts.ipynb' with code, as well as a folder 'charts' with visualizations.
 
 ## Contributors
 The project was made by a group of Junior AI & Data Scientists (in alphabetical order):
